@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TaskList = ({ task }) => {
+const TaskList = ({ task, removeCompletedTask }) => {
   const [listtask, setlisttask] = useState([]);
   // Actualiza el estado solo cuando 'task' cambie
   useEffect(() => {
@@ -12,13 +12,14 @@ const TaskList = ({ task }) => {
   }, [task]);
 
   const ButtonCompleteTask = (index) => {
-    // Creamos una copia del array
-    const updatedTasks = [...listtask];
-    // Eliminamos la tarea con el índice especificado
-    updatedTasks.splice(index, 1);
-    // Actualizamos el estado con el array filtrado
-    setlisttask(updatedTasks);
-    alert(`Task ${index} completed`);
+    // // Creamos una copia del array
+    // const updatedTasks = [...listtask];
+    // // Eliminamos la tarea con el índice especificado
+    // updatedTasks.splice(index, 1);
+    // // Actualizamos el estado con el array filtrado
+    // setlisttask(updatedTasks);
+    removeCompletedTask(index);
+    alert(`Task ${index + 1} completed`);
     console.log(listtask);
   };
 

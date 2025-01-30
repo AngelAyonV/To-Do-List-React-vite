@@ -38,6 +38,12 @@ const ToDoListApp = () => {
     }
   };
 
+  // Función para eliminar una tarea completada
+  const removeCompletedTask = (index) => {
+    const updatedTasks = submittedText.filter((_, i) => i !== index); // Filtrar la tarea eliminada
+    setSubmittedText(updatedTasks); // Actualizar el estado
+  };
+
   return (
     <div className="todo-container">
       <h1>To do list App</h1>
@@ -50,7 +56,7 @@ const ToDoListApp = () => {
         onKeyDown={handleKeyDown}
       />
       {/* Aquí va la lista de tareas */}
-      <TaskList task={submittedText} />
+      <TaskList task={submittedText}  removeCompletedTask={removeCompletedTask}/>
       <div className="containerButton">
         <button onClick={ButtonAddTask}>Agregar Tarea</button>
         <button className="delete-button" onClick={ButtonDeleteTask}>
