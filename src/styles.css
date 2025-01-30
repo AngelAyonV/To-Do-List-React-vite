@@ -1,0 +1,117 @@
+.todo-container { /* Contenedor principal */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    width: 90%; /* Ancho del contenedor (ajustable) */
+    margin: 50px auto; /* Márgenes para centrar el contenedor en la página */
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde opcional */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    background-color: #f8f9fa; /* Color de fondo suave opcional */
+  }
+  
+  h1 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #343a40; /* Color de texto más oscuro */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  input[type="text"] {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 12px;
+    border: 1px solid #ced4da; /* Borde sutil */
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+    outline: none; /* Quita el contorno al hacer focus */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición suave */
+  }
+  
+  input[type="text"]:focus {
+    border-color: #80bdff; /* Color de borde al hacer focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave al hacer focus */
+  }
+  
+  input[type="text"]::placeholder { /* Estilos para el placeholder */
+    color: #adb5bd;
+  }
+
+/* task list */
+
+.containerListTask {
+    display: flex;
+    flex-direction: row;  /* Acomoda los elementos en columna */
+    gap: 10px;  /* Espacio entre los elementos (li y button) */
+  }
+
+.card {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .card li {
+    background: #f4f4f4;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .containerButton { /* Contenedor del botón (necesario para Flexbox) */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    /* min-height: 100vh; Opcional: Altura mínima para centrar en toda la pantalla */
+  }
+  
+
+  button {
+    background-color: #4681c0;
+    color: white;
+    border: none;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .delete-button {
+    background-color: rgb(203, 97, 97); 
+    color: white; /* Color del texto para que sea visible */
+  }
+  .delete-button:hover {
+    background-color: rgb(93, 38, 38); 
+  }
+  .complete-button {
+    background-color: rgb(82, 147, 82); 
+    color: white; /* Color del texto para que sea visible */
+  }
+  .complete-button:hover {
+    background-color: rgb(20, 80, 38); 
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  
